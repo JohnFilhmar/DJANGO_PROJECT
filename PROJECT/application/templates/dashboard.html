@@ -19,22 +19,21 @@
                      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                   </svg>
                </button>
-               <a href="https://flowbite.com" class="flex ms-2 md:me-24 gap-4">
+               <a href="#" class="flex ms-2 md:me-24 gap-4">
                   <svg class="w-6 h-6 text-gray-800 dark:text-white mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
                      <path d="M17 16h-1V2a1 1 0 1 0 0-2H2a1 1 0 0 0 0 2v14H1a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM5 4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4Zm0 5V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Zm6 7H7v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm2-7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1Zm0-4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1Z"/>
                   </svg>
                <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" /> -->
-               <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Municipal Health Center of Victoria</span>
+               <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white hidden md:block lg:block">Municipal Health Center of Victoria</span>
+               <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white block md:hidden lg:hidden">MHCV</span>
                </a>
             </div>
             <div class="flex items-center">
                <div class="flex items-center ms-3">
-                  <div>
-                     <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                  <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                      <span class="sr-only">Open user menu</span>
                      <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
-                     </button>
-                  </div>
+                  </button>
                   <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
                      <div class="px-4 py-3" role="none">
                      <p class="text-sm text-gray-900 dark:text-white" role="none">
@@ -116,8 +115,8 @@
       </aside>
       
       <div class="p-4 sm:ml-64">
-         <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-            <div class="grid grid-cols-3 gap-4 mb-4 h-96">
+         <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 h-screen">
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-4 h-96">
                <div class="flex items-center justify-center h-auto rounded bg-gray-50 dark:bg-gray-800">
                   <canvas id="barChart"></canvas>
                </div>
@@ -127,10 +126,8 @@
                <div class="flex items-center justify-center h-auto rounded bg-gray-50 dark:bg-gray-800">
                   <canvas id="lineChart"></canvas>
                </div>
-            </div>
-            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800" style="margin-top: 150px; margin-bottom: 150px;">
-                  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                     <caption class="text-xl font-bold text-gray-700 dark:text-gray-400 mb-4">Recent Patients</caption>
+               <div class="flex items-center justify-center h-auto col-span-1 md:col-span-3 lg:col-span-3">
+                  <table class="w-screen text-xs text-gray-500 dark:text-gray-400 mb-14 overflow-x-auto">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                               <th scope="col" class="px-6 py-3">
@@ -145,32 +142,10 @@
                               <th scope="col" class="px-6 py-3">
                                  Price
                               </th>
-                              <th scope="col" class="px-6 py-3">
-                                 Action
-                              </th>
                         </tr>
                      </thead>
-                     <tfoot class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                              <th scope="col" class="px-6 py-3">
-                                 Product name
-                              </th>
-                              <th scope="col" class="px-6 py-3">
-                                 Color
-                              </th>
-                              <th scope="col" class="px-6 py-3">
-                                 Category
-                              </th>
-                              <th scope="col" class="px-6 py-3">
-                                 Price
-                              </th>
-                              <th scope="col" class="px-6 py-3">
-                                 Action
-                              </th>
-                        </tr>
-                     </tfoot>
                      <tbody>
-                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                  Apple MacBook Pro 17"
                               </th>
@@ -183,11 +158,134 @@
                               <td class="px-6 py-4">
                                  $2999
                               </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
                               <td class="px-6 py-4">
-                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
                               </td>
                         </tr>
-                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                 Apple MacBook Pro 17"
+                              </th>
+                              <td class="px-6 py-4">
+                                 Silver
+                              </td>
+                              <td class="px-6 py-4">
+                                 Laptop
+                              </td>
+                              <td class="px-6 py-4">
+                                 $2999
+                              </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                  Microsoft Surface Pro
                               </th>
@@ -200,11 +298,8 @@
                               <td class="px-6 py-4">
                                  $1999
                               </td>
-                              <td class="px-6 py-4">
-                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                              </td>
                         </tr>
-                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <tr class="bg-white dark:bg-gray-800">
                               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                  Magic Mouse 2
                               </th>
@@ -217,46 +312,10 @@
                               <td class="px-6 py-4">
                                  $99
                               </td>
-                              <td class="px-6 py-4">
-                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                              </td>
-                        </tr>
-                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                 Google Pixel Phone
-                              </th>
-                              <td class="px-6 py-4">
-                                 Gray
-                              </td>
-                              <td class="px-6 py-4">
-                                 Phone
-                              </td>
-                              <td class="px-6 py-4">
-                                 $799
-                              </td>
-                              <td class="px-6 py-4">
-                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                              </td>
-                        </tr>
-                        <tr>
-                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                 Apple Watch 5
-                              </th>
-                              <td class="px-6 py-4">
-                                 Red
-                              </td>
-                              <td class="px-6 py-4">
-                                 Wearables
-                              </td>
-                              <td class="px-6 py-4">
-                                 $999
-                              </td>
-                              <td class="px-6 py-4">
-                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                              </td>
                         </tr>
                      </tbody>
                   </table>
+               </div>
             </div>
          </div>
       </div>    
